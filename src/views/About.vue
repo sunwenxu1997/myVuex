@@ -1,5 +1,16 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>{{name}}</h1>
+     <h1>{{phone}}</h1>
   </div>
 </template>
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  //计算属性
+  computed: {
+    ...mapGetters(['name','phone'])
+  }
+}
+</script>
